@@ -16,18 +16,7 @@ public class LoadData implements CommandLineRunner {
     private CategoryRepository categoryRepository;
     private CompletedAuctionRepository completedAuctionRepository;
     private UserRepository userRepository;
-/*
-    public LoadData(AuctionRepository auctionRepository, AuctionBidsRepository auctionBidsRepository,
-                    AuctionImageRepository auctionImageRepository, CategoryRepository categoryRepository,
-                    CompletedAuctionRepository completedAuctionRepository,UserRepository userRepository) {
-    this.auctionBidsRepository=auctionBidsRepository;
-    this.auctionImageRepository=auctionImageRepository;
-    this.auctionRepository=auctionRepository;
-    this.userRepository=userRepository;
-    this.categoryRepository=categoryRepository;
-    this.completedAuctionRepository=completedAuctionRepository;
-    }
-*/
+
     @Override
     public void run(String... args) throws Exception {
         Category category=new Category();
@@ -35,5 +24,6 @@ public class LoadData implements CommandLineRunner {
         category.setActive(1);
         categoryRepository.save(category);
     log.info("catagory added!");
+
     }
 }
